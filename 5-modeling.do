@@ -116,8 +116,8 @@ nocons addstat(Pseudo R2, e(r2_p)) ctitle("Model 3") eform dec(3) noomitted noob
 
 
 * Model 4: Include both MAT variables (records whether any form AND all forms provided within each county-year)
-qui nbreg entered drugdeathrate composite perc_white i.regions i.some_MAT i. MAT_acc i.datayear i.county, exposure(child_pop) 
-cluster(state)
+qui nbreg entered drugdeathrate composite perc_white i.regions i.some_MAT i. MAT_acc i.datayear i.county, 
+exposure(child_pop) cluster(state)
 
 nbreg, irr
 

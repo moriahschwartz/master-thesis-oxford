@@ -154,7 +154,8 @@ i.datayear) nocons addstat(Pseudo R2, e(r2_p)) ctitle("Model 2") eform dec(3) no
 
 
 * Model 3.2
-qui nbreg entered drugdeathrate composite perc_white i.regions i.some_MAT i.datayear i.county, exposure(child_pop) cluster(state)
+qui nbreg entered drugdeathrate composite perc_white i.regions i.some_MAT i.datayear i.county, exposure(child_pop) 
+cluster(state)
 
 nbreg, irr
 
@@ -163,8 +164,8 @@ i.datayear) nocons addstat(Pseudo R2, e(r2_p)) ctitle("Model 3") eform dec(3) no
 
 
 * Model 4.2
-qui nbreg entered drugdeathrate composite perc_white i.regions i.some_MAT i. MAT_acc i.datayear i.county, exposure(child_pop)
-cluster(state)
+qui nbreg entered drugdeathrate composite perc_white i.regions i.some_MAT i. MAT_acc i.datayear i.county, 
+exposure(child_pop) cluster(state)
 
 nbreg, irr
 
